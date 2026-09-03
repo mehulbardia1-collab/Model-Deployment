@@ -9,8 +9,8 @@ df.drop(columns=["CustomerID"], inplace=True)
 # raw H/L/M values. Encoding it here (e.g. LabelEncoder) would make training
 # and serving use different representations, silently breaking predictions.
 
-X = df.drop(columns=["ProdToken"])
-y = df["ProdToken"]
+X = df.drop(columns=["PradToken"])
+y = df["PradToken"]
 
 # stratify=y keeps the (imbalanced) failure ratio consistent across splits
 Xtrain, Xtest, ytrain, ytest = train_test_split(
