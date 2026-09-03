@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 df = pd.read_csv("tourism_project/data/tourism.csv")
 df.drop(columns=["CustomerID"], inplace=True)
 
-# NOTE: 'Type' is intentionally left as raw strings (H/L/M).
+# Categorical columns are kept as raw strings.
 # The training pipeline one-hot-encodes it, and the Streamlit app also sends
 # raw H/L/M values. Encoding it here (e.g. LabelEncoder) would make training
 # and serving use different representations, silently breaking predictions.
